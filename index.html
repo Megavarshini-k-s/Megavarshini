@@ -106,23 +106,8 @@ color:#3ddc84;
 }
 
 .project p{
-padding:0 15px 10px;
+padding:0 15px 20px;
 color:#ccc;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin:10px 15px 20px;
-padding:8px 15px;
-background:#3ddc84;
-color:#000;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-.btn:hover{
-background:#2bbf6a;
 }
 
 /* SKILLS */
@@ -142,39 +127,24 @@ background:rgba(61,220,132,0.1);
 
 /* CONTACT */
 .contact{
-display:flex;
-justify-content:center;
-padding:60px 20px;
+text-align:center;
+padding:40px;
 }
 
-.contact-box{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:15px;
-width:100%;
+.contact input,.contact textarea{
+width:90%;
 max-width:400px;
-}
-
-.contact-box input,
-.contact-box textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
+padding:10px;
+margin:10px;
 border:none;
 border-radius:10px;
-background:#161b22;
-color:#fff;
 }
 
-.contact-box button{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:none;
-border-radius:10px;
+.contact button{
 background:#3ddc84;
-color:#000;
-font-weight:600;
+border:none;
+padding:10px 20px;
+border-radius:10px;
 cursor:pointer;
 }
 
@@ -218,7 +188,10 @@ transform:translateY(0);
 <p>Android Developer • Kotlin • Jetpack Compose</p>
 
 <div class="card hidden">
-<p>Passionate Android developer building modern apps.</p>
+<p>
+Passionate Android developer building modern apps with clean UI and efficient performance.
+Experienced in Firebase, SQL, and real-world app development.
+</p>
 </div>
 </header>
 
@@ -230,15 +203,31 @@ transform:translateY(0);
 <div class="project hidden">
 <img src="mark_entry.jpg">
 <h3>Marks Entry</h3>
-<p>Teacher-friendly marks system.</p>
-<a href="#" class="btn">View</a>
+<p>Teacher-friendly marks management system.</p>
 </div>
 
 <div class="project hidden">
 <img src="switch_user.jpg">
 <h3>Switch User</h3>
-<p>Multiple accounts support.</p>
-<a href="#" class="btn">View</a>
+<p>Multiple account switching feature.</p>
+</div>
+
+<div class="project hidden">
+<img src="review_class.jpg">
+<h3>Student Review</h3>
+<p>Review and feedback system.</p>
+</div>
+
+<div class="project hidden">
+<img src="view_my_marks.jpg">
+<h3>View Marks</h3>
+<p>Students can track their marks visually.</p>
+</div>
+
+<div class="project hidden">
+<img src="expense_tracker.jpg">
+<h3>Expense Tracker</h3>
+<p>Track daily expenses easily.</p>
 </div>
 
 </div>
@@ -248,30 +237,35 @@ transform:translateY(0);
 <h2 style="color:#3ddc84;">Skills</h2>
 <span class="skill">Kotlin</span>
 <span class="skill">Android</span>
+<span class="skill">Firebase</span>
+<span class="skill">SQL</span>
+<span class="skill">Jetpack Compose</span>
 </section>
 
 <section class="contact hidden" id="contact">
 <h2 style="color:#3ddc84;">Contact</h2>
-
-<div class="contact-box">
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea rows="5" placeholder="Message"></textarea><br>
 <button>Send</button>
-</div>
-
 </section>
 
 <footer>
+<p>Follow me:</p>
+<a href="https://instagram.com/megavarshini_k_s">Instagram</a>
+<a href="https://linkedin.com/in/MEGA K S">LinkedIn</a>
 <a href="https://github.com/megavarshini-k-s">GitHub</a>
 </footer>
 
 <script>
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('show');}
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
 });
 });
+
 document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 </script>
 
